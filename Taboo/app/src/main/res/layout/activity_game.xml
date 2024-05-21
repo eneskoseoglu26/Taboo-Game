@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:background="@drawable/game_background">
+
+    <ImageView
+        android:id="@+id/tabooImageView"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/taboo"
+        android:layout_centerHorizontal="true"></ImageView>
+
+    <ImageView
+        android:id="@+id/pauseImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/pause"></ImageView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/tabooImageView"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:max="100"
+        android:progress="50"
+        android:progressDrawable="@drawable/custom_progress_bar" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="90"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tabooImageView"/>
+    
+    <ImageView
+        android:id="@+id/teamImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/group"
+        android:layout_below="@id/progressBar"
+        android:layout_marginStart="20dp"></ImageView>
+
+    <TextView
+        android:id="@+id/teamTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Takım A"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:layout_toEndOf="@id/teamImageView"
+        android:layout_below="@id/progressBar"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="7dp" />
+
+    <ImageView
+        android:id="@+id/scoreImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/score"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="70dp"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:text="10"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="7dp"></TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="250dp"
+        android:layout_height="275dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        android:layout_below="@+id/progressBar"
+        android:layout_marginTop="75dp"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#3F51B5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/wordTextView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#FF5722"
+                android:gravity="center"
+                android:text="Kelime"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/word1TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Yasaklı Kelime"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/word2TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Yasaklı Kelime"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/word3TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Yasaklı Kelime"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/word4TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Yasaklı Kelime"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/correctButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/correct_background"
+            android:onClick="addScore"
+            android:src="@drawable/correct_icon" />
+
+        <LinearLayout
+            android:id="@+id/nextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/skip_background"
+            android:onClick="decreaseSkip">
+
+            <ImageView
+                android:id="@+id/nextButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/skip_icon"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/skipCountTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="(10)"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center"></TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/falseButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/wrong_background"
+            android:onClick="decreaseScore"
+            android:src="@drawable/block_icon" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

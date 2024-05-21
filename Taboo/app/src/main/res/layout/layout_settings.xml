@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backg"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Süre:"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"></TextView>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/timeTextView">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/timeButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/timeButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/timeButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="150"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/skipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pas Hakkı:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_below="@id/buttonLayout"></TextView>
+
+    <LinearLayout
+        android:id="@+id/skipLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/skipTextView">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/skipButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/skipButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/skipButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/winScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kazanma Skoru:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_below="@id/skipLayout"></TextView>
+
+    <LinearLayout
+        android:id="@+id/winScoreLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/winScoreTextView">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/winScoreButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/winScoreButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/winScoreButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+</RelativeLayout>
